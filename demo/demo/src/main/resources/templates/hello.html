@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"> <!-- CSS 파일 경로 설정 -->
+</head>
+<body>
+    <h1>Hello Spring HTML!</h1>
+    <p>이건 HTML 템플릿에서 렌더링된 페이지입니다.</p>
+
+    <!-- REST API 호출 버튼 및 응답 표시 영역 -->
+    <button id="apiButton">REST API 호출</button>
+    <p id="apiResponse"></p>
+
+</body>
+    <script th:src="@{/js/test.js}"></script> <!-- JS 파일 경로 설정 -->
+</html>
