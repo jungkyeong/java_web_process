@@ -1,0 +1,12 @@
+# Maven
+target/
+
+## VS Code
+.vscode/
+
+## AI
+.claude/
+
+# Logs
+*.log
+logs/

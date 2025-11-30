@@ -7,7 +7,12 @@ import org.springframework.stereotype.Controller;
 @RestController // HTTP Response Body Return Module
 public class HelloRestController {
 
-    @GetMapping("/hello") // http://localhost:8080/hello
+    @GetMapping("/") // http://localhost:8543/
+    public String index() {
+        return "Welcome to Demo Application!";
+    }
+
+    @GetMapping("/hello") // http://localhost:8543/hello
     public String hello() {
         return "Hello, Spring!";
     }

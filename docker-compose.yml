@@ -1,0 +1,17 @@
+services:
+  sampletest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sample-test
+    ports:
+      - "8543:8543"
+    environment:
+      - JAVA_OPTS=-Xmx512m -Xms256m # 최대 동적 메모리 관리 설정 
+    networks:
+      - app-network
+    restart: unless-stopped # 수동을 제외한 크래시 발생으로 다운 시 재시작 시도
+
+networks:
+  app-network:
+    driver: bridge # 네트워크 설정: 같은 호스트 내 통신 가능 (포트로 외부 접근 가능)
